@@ -240,6 +240,9 @@ The following scenarios are chosen to illustrate the variety of challenges along
 %     \label{fig:op-dims}
 % \end{figure}
 
+\subsection{Manufacturing Line}
+In traditional manufacturing settings, robots have been in cages, working in separate spaces from human beings on the manufacturing line and performing separate tasks. Moving forward, manufacturing companies are interested in integrating “safe” robots that can work in close proximity with their human teammates, both in order to reduce the total footprint of the manufacturing line and to accomplish new tasks that were not possible before or improve efficiency of the line overall. Integrating robots in this setting introduces complexity in terms of team and environment factors. While tasks in these settings are well-defined, the environment and team are semi-structured, requiring new flexibility from the robot teammates. How the human-robot team approaches the task will be more fluid, and robot teammates will need to adapt to performing updated roles online if human teammates modify what they are doing. Additionally, the environment outside of the cage in which human workers are present is more dynamic and uncertain than the well-defined cage setting.
+
 \section{An Overview of Existent Taxonomies in HRI}
 \label{sec:overview}
 
@@ -741,6 +744,95 @@ Given the  context, and task and team dynamics under our taxonomy, the level of 
     
 \end{enumerate}
 
+\section{Application of the Taxonomy to Real-World Applications}
+In the previous section, we introduce a taxonomy over factors impacting interaction in heterogeneous teams. These include contextual factors which cover characteristics of problem inputs, dynamics factors which include different characteristics of decisions made in terms of problem approach, and effects which are the resultant requirements on interaction given the context and dynamics. In this section we introduce a process, drawing from the Cognitive Work Analysis (CWA) and co-active design literature, by which contextual factors can be incorporated into the decision of dynamics factors which influence the effects. Steps in this process include creation of an abstraction hierarchy, determination of observability, comprehensibility, predictability, and directability requirements, interdependence analysis, and decision of dynamics factors and effects. We first detail each of these steps and then present three domain examples including a capture-the-flag scenario, a rover planning scenario, and an autonomous vehicle scenario to demonstrate the application of this process.
+
+\subsection{Abstraction Hierarchy}
+The CWA literature introduces the idea of an Abstraction Hierarchy (AH) for decomposition of domain goals and tasks required to support those goals for a given mission or high-level task [CITE CWA literature + applied decision science].  Goals and tasks are represented at different levels of abstraction including mission goals, priorities and values, generalized functions, and temporal functions. An example Abstraction Hierarchy for a [FILL IN] scenario is shown in Figure [FILL IN]. 
+
+We propose development of an Abstraction Hierarchy as the first step of the analysis process for determining dynamics factors and resultant effects. As heterogeneous teams aim to achieve increasingly complex tasks in complex domains, different team members will need information at different levels of abstraction. The Abstraction Hierarchy provides a framework from which to determine different possible levels of abstraction of information for communication between teammates or sub-teams. 
+
+In conjunction with analysis of observability, comprehensibility, predictability, and directability requirements and the interdpendence analysis, task allocation can be done at different levels of abstraction depending on team capabilities through consideration of the Abstraction Hierarchy. Assigning tasks at a higher level of abstraction allows teams or individuals greater flexibility in how they execute tasks, while assigning tasks at a lower level of abstraction provides teams or individuals more detailed instructions as how to how execute a task when necessary. In other words, there is a trade-off between pre-planning and flexibility in the task allocation component of mission planning.
+
+\subsection{Observability, Comprehensibility, Predictability, and Directability Requirements}
+[Cite co-active design] propose the consideration of observability, predictability, and directability (OPD) requirements in determination of how a task should be structured for a joint activity. These are requirements that go beyond taskwork requirements and are necessary for the support of accomplishment of a joint activity through mutual understanding and influence between teammates. 
+
+[Cite CAD] define observability as making pertinent aspects of one’s status, as well as one’s knowledge of the team, task, and environment observable to others. They define predictability as the need for one’s actions to be predictable enough that others can reasonably rely on them when considering their own actions. Finally, they define directability as one’s ability to direct the behavior of others and complementarily be directed by others. 
+
+Drawing from the definition of the three levels of situational awareness in [cite Endsley], perception, comprehension, and projection, we see analogs between [CAD's] observability and predictability and [Endsley's] perception and projection, respectively. However, while comprehension is a critical component of awareness in a situation, there is currently no analog to comprehension in the OPD framework. We therefore expand on the OPD framework to additionally consider ``comprehensibility'' requirements as an additional category, giving us an OCPD framework.
+
+We propose consideration of OCPD requirements as the second step in the analysis process for determining dynamics factors and effects. While the Abstraction Hierarchy breaks down tasks and taskwork that can be assigned at different levels of abstraction, the corresponding OCPD requirements for each task in the hierarchy determine what specific information needs to be communicated at each level of abstraction to support the taskwork. OCPD requirements can be defined for each box in the abstraction hierarchy to support this analysis.
+%Note: need to add in something about observability requirements corresponding to both what needs to be observed and what needs to be observabile, etc 
+
+\subsection{Interdependence Analysis}
+[cite CAD] further proposes an Interdependence Analysis (IA) process to determine team decomposition and task allocation. Specifically, they introduce the concept of an IA table in which capacities required for each task and considered in conjunction with team member capabilities to determine different possible team structures for approaching a joint task (see figure [X]). While in their work, OPD requirements are derived from the connections between subtasks, we see OCPD requirements as part of the capacities required for each task as determined by the abstraction hierarchy and include them as requirements in the IA table. The output of the IA process is the enumeration of various possible team decompositions with corresponding task allocations that are feasible assignments for task execution. Drawing from the abstraction hierarchy, in this step, tasks can be considered at different levels of abstraction as necessary. 
+
+\subsection{Tying Context to Dynamics and Effects}
+The process of creating an abstraction hierarchy, determining OCPD requirements, and performing an interdependence analysis results in different possible team and task decompositions for the task that the team is aiming to accomplish. Once the team and task decomposition is determined, dynamics factors and effects can be considered. Task and goal dependencies, team roles, the expertise hierarchy, and communication are the outputs of the analysis process. The level of autonomy and level of information abstraction effects are also directly determined by the outputs of this process. 
+
+%%TO DO: Modify the text in the above section
+
+\subsection{Domain Examples}
+In the following section we detail three examples in which we apply our analysis method to a capture the flag domain, a rover planning domain, and an autonomous vehicle domain. 
+\begin{enumerate}
+\item Capture the Flag Example Domain
+\\In the capture the flag example domain, two teams...
+%Add text and citation from the workshop paper here.
+\begin{enumerate}
+    \item Contextual Factors: Problem Inputs
+    \item Abstraction Hierarchy
+    \\The abstraction hierarchy for the capture the flag domain is shown in figure \ref{fig:ctfah}. We have detailed the first three levels of the hierarchy including mission goals, priorities and values, and generalized functions. We also detail a subset of the total functions at the temporal functions level. %%Note: need to add this to the picture%%
+    
+    The high-level mission goal in this scenario is to capture the opponent team's flag while preventing the opponent team from capturing your team's flag first. At the second level, the priorities and values are to ``protect our flag'' and ``capture the other team's flag''.
+    
+   
+    \begin{figure}[tb]
+    \centering
+    \includegraphics[width=\columnwidth]{ctfAH.png}
+   \caption{Abstraction Hierarchy for Capture the Flag Scenario}
+    \label{fig:ctfah}
+    \end{figure}
+
+    \item Observability, Comprehensibility, Predictability, and Directability Requirements
+    \\Here we detail the definition of OCPD requirements for a subset of the boxes at each level of the hierarchy to demonstrate how such requirements can be defined and used in analysis. We further use this subset in our interdependence analysis in section d.
+    
+    \item Interdependence Analysis
+    %Include picture of interdependence analysis table here.
+    %Need to discuss team member capabilities somewhere. Maybe in the input section.
+    \item Tying Context to Dynamics and Effects
+\end{enumerate}
+
+
+\item Rover Planning Example Domain
+
+\begin{enumerate}
+    \item Contextual Factors: Problem Inputs
+    \item Abstraction Hierarchy
+    \\The abstraction hierarchy for the rover planning domain is shown in figure \ref{fig:rpah}. As with the capture the flag example, we have detailed the first three levels of the hierarchy including mission goals, priorities and values, and generalized functions. We also detail a subset of the total functions at the temporal functions level. %%Note: need to add this to the picture%%
+    
+       \begin{figure}[tb]
+    \centering
+    \includegraphics[width=\columnwidth]{rpAH.png}
+   \caption{Abstraction Hierarchy for Rover Planning Scenario}
+    \label{fig:rpah}
+    \end{figure}
+    
+    \item Observability, Comprehensibility, Predictability, and Directability Requirements
+    \item Interdependence Analysis
+    \item Tying Context to Dynamics and Effects
+\end{enumerate}
+
+\item Autonomous Car Example Domain
+
+\begin{enumerate}
+    \item Abstraction Hierarchy
+    \item Observability, Comprehensibility, Predictability, and Directability Requirements
+    \item Interdependence Analysis
+    \item Tying Context to Dynamics and Effects
+\end{enumerate}
+
+\end{enumerate}
+
 \section{Discussion}
 \label{sec:discussion}
 
@@ -781,7 +873,7 @@ We present an illustrative example by walking the reader through gaps in charact
 While our taxonomy takes a first step towards defining such challenges by identifying dimensions proposed from a different lens but applicable to system context, like \textit{expected dynamics} and \textit{team reconfigurability}, there is still a requirement for a deeper characterization.
 Such an investigation can help in analyzing operational contexts for HRI in a standardized manner such that the insights from one taxonomy can be generalized or conditioned from one context to another.
 
-\subsection{OLD}
+\section{OLD}
 
 One of our goals is to define an upper ontology over the taxonomies mentioned in the previous section, as a na\" ive tool which can help a reader in describing and analyzing the interactions in their mixed teams.
 Drawing from our insights in section \ref{sec:op-context}, we establish the ``Task, Environment and Team Context'' as the main differentiating dimensions for operational contexts.
@@ -911,35 +1003,6 @@ This connect us back to the definition \ref{def:cooperation} of cooperation, and
 While the definition provided for situational awareness in previous section works for analyzing a lone system's SA, \cite{Endsley1995} refines this model to aide the study of joint SA via team-mate interaction.
 \citeauthor{Endsley1995} here keeps the same model for dynamic decision making with the levels of SA, however he also adds a delineation between ``task/system factors'' and ``individual factors'' which together affect the overall SA level.
 And this later category of individual factors is exactly what we are interested in examining.
-
-\section{Discussion}
-\label{sec:discussion}
-In this paper, we proposed an upper ontology for characterizing interaction within heterogeneous teams in complex scenarios and introduced an a-priori-situation awareness framework to support it. This upper ontology builds on existing taxonomies by organizing existing categorizations from these works and defines new categorizations to classify problems involving task-, environment-, and team-related complexity.
-
-The need to define a new upper ontology over existing taxonomies is demonstrated by the operational contexts discussed in section \ref{sec:op-context}.  In the museum docents and interactive learners context, while the environment is known, the task model is incomplete and there are numerous unmodeled interactants. In the USAR scenario, complexity arises from the lack of known structure and full mapping of the environment in addition the non-static assignment of roles to teammates. Finally in the military building breach scenario, teammates are operating in an unknown environment, the task is only partially modeled, and there exists a fluid team hierarchy. These operational contexts motivate the need for categories considering a priori modeling and online observability and also the need to classify level of automation and level of information as effects rather than static artifacts of a given context. 
-
-The structure of the upper ontology developed in this work has highlighted some areas of interest for future work. First, for categorizations not delineated by existing taxonomies, more research is needed to examine the impact of these factors on interaction. These categories primarily include modeling and observability in the task, team, and environment contexts and a particular exploration of these ideas as they relate to large, heterogeneous teams. Additionally, further research is needed to explore the optimal relations between the context and dynamics variables and effects.  Developing a full mapping between given context and dynamics variables and the recommended levels of automation associated with each role and subsequent levels of information necessary for each role is an open area for further research. 
-
-%In this paper, we proposed an upper ontology for characterizing interaction for heterogeneous teams working in novel and complex domains. One of the objectives of this work was to lay the groundwork from which the community can identify where gaps in the literature exist, but we see a few initial key areas for further research. First, solidifying the relation of the level of autonomy and level of information effects to the context and dynamics of a given scenario would be of benefit. While we provide general categorizations as a starting point, specific mappings of appropriate level of autonomy or level of information for each teammate in their given context is an important area for future work. Second, this and other gaps in the literature would be supported by additional observational studies to better characterize interaction in large heterogeneous teams. Finally, while the subject of much of the literature in this space has thus far dealt with interaction in teams of two to a few, interaction in larger heterogeneous swarms is a nascent and less-studied area. We therefore recommend using the factors outlined here to study interaction in larger teams.
-
-%A review of the current state-of-the-art indicates that the areas of research fueling the collaboration of tomorrow are:
-%\begin{itemize}
-%    \item Adaptive automation \cite{parashar_goel_sheneman_christensen_2018}
-%    \item Bi-directional communication
- %   \item More observational studies to better characterize interactions
- %   \item Better ways to communicate data over limited communication resources
- %   \item The paper also points out that for a truly companion-like behavior the ability to be shaped by learning than having closed functionality is essential for the robotic agent.
-  %  \item next-point
-%\end{itemize}{}
-
-%\citeauthor{chen2018situation} \cite{chen2018situation} use the above proposed SAT model to design interfaces for remote control of one ground agent.
-%Their results suggest that while SAT model helps in improving performances in some cases, it needs to be dynamic and bi-directional for adapting to the operator's individual differences.
-%Additionally, they observe that conditioned on the a priori environmental awareness of the user the same level of information can produce different decisions.
-%They present their results using a computer-based human-robot mediator called RoboLeader \cite{chen2010roboleader}, which provided next-goal options and SA information to the operator.
-%They conducted an experiment where an agent was to be driven across the city but introduced weather-based disturbances into the map.
-%They observed that having an advanced environmental knowledge via known maps, made the operators over-confident about their own reasoning about time-to-finish and over-ruled the (correct) detour suggestions offered by the mediator.
-%This is in contrast to when the environment was unmapped and the operators trusted the decisions of the RoboLeader, and there was a higher agreement rate.
-
 
 % \section*{Outline}
 
