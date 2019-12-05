@@ -134,9 +134,9 @@ Priyam Parashar, Lindsay M. Sanneman, Julie A. Shah, Henrik I. Christensen
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-This document contains the edits to the taxonomy as well as the changes to a
-priori sa framework. Additionally, the a priori sa is then further intertwined
-into the dynamic factors of the taxonomy to create a more grounded framework.
+This document contains the edits to the taxonomy as well as the changes to a priori sa framework.
+Additionally, the a priori sa is then further intertwined into the dynamic factors of the
+taxonomy to create a more grounded framework.
 \end{abstract}
 
 
@@ -146,99 +146,107 @@ into the dynamic factors of the taxonomy to create a more grounded framework.
 
 \subsection{Additions}
 
-The main article that I found and had material contributions to the taxonomy is
-the one by \citet{moya2007towards}. The taxonomy takes a holistic view of a
-multi-system environment and considers the following three components as overall
-description of the system:
+The main article that I found and had material contributions to the taxonomy is the one by
+\citet{moya2007towards}. The taxonomy takes a holistic view of a multi-system environment and
+considers the following three components as overall description of the system:
 \begin{itemize}{}
-  \item Situated environment
+    \item Situated environment
     \begin{itemize}{}
-        \item Closure - If agents defined outside the system can still affect
-        the environment
-        \item Dynamism - Whether the environment is affected by just the system
-        (static) or because of randomness/open environment (dynamic)
-        \item Determinism - If actions always have a deterministic outcome over
-        time, sort of like environment stationarity
-        \item Cardinality - Size of environment, affected agents and objects
-        (finite, finite uncountable, infinite, etc.)
+        \item Closure - If agents defined outside the system can still affect the environment
+        \item Dynamism - Whether the environment is affected by just the system (static) or because
+        of randomness/open environment (dynamic)
+        \item Determinism - If actions always have a deterministic outcome over time, sort of like
+        environment stationarity
+        \item Cardinality - Size of environment, affected agents and objects (finite, finite
+        uncountable, infinite, etc.)
     \end{itemize}
     \item Population
     \begin{itemize}{}
-      \item Size
-      \item Diversity
-      \item Homogeneity
-      \item Goal structure
-      \item Cooperability
-    \end{itemize}
-  \item Agent characteristics
-    \begin{itemize}{}
-      \item Reasoning
-      \item Perception
-      \item Action
-    \end{itemize}
+        \item Size
+        \item Diversity
+        \item Homogeneity
+        \item Goal structure 
+        \item Cooperability 
+    \end{itemize} 
+    \item Agent characteristics
+    \begin{itemize}{} 
+    \item Reasoning 
+    \item Perception 
+    \item Action 
+    \end{itemize} 
 \end{itemize}
 
-I found multiple evidence in literature that capabilities are
-always abstracted one way or the other. We can leverage this trend to propose
-mobile, perception and reasoning bins which if present/absent represent an
-agent's capabilities. TK: references of papers I found this in. The paper
-mentioned in the previous paragraph also has a taxonomy spelling out bins for
-perception and communication categories.
+I found multiple evidence in the literature that capabilities are always abstracted one way or
+the other. We can leverage this trend to propose mobile, perception and reasoning bins which if
+present/absent represent an agent's capabilities. TK: references of papers I found this in. The
+paper mentioned in the previous paragraph also has a taxonomy spelling out bins for perception
+and communication categories.
 
 To bring back the papers we have already included, I thought the \texttt{phys_proximity}
-categories in \citet{yanco2004updated} made a lot of sense for associating the
-environment or workspace configurations to the physical nature of tasks.
+categories in \citet{yanco2004updated} made a lot of sense for associating the environment or
+workspace configurations to the physical nature of tasks.
 
-\subsection{Changes}
-\begin{itemize}{}
-  \item ``Criticality'' should be further broken down into risk versus mission
-  criticality. Mission criticality can be grounded into Lindsay's co-design
-  method while the risk scale can be better informed by robot risk scales.
-  \item Another thing I realized was that environment is too broad a category,
-  maybe that is why we never saw much specification for it. Might we change
-  ours to ``situated workspace''. I think this terminology has better relation
-  to what we actually define in our taxonomy.
-  \item Given that levels of autonomy divides levels between sensing, acting
-  and planning, we should maybe expand the Cognitive Task Nature category
-  further into perception and reasoning.
-\end{itemize}
+\subsection{Changes} \begin{itemize}{} \item ``Criticality'' should be further broken down into
+risk versus mission criticality. Mission criticality can be grounded into Lindsay's co-design
+method while the risk scale can be better informed by robot risk scales. \item Another thing I
+realized was that environment is too broad a category, maybe that is why we never saw much
+specification for it. Might we change ours to ``situated workspace''. I think this terminology
+has better relation to what we actually define in our taxonomy. \item Given that levels of
+autonomy divides levels between sensing, acting and planning, we should maybe expand the
+Cognitive Task Nature category further into perception and reasoning. \item We should also use a
+running example (maybe one of the two from the case-study section) to ground our abstract
+statements into something intuitive. Maybe we can use the complex capture-the-flag example as the
+main running example while the rest is just added to provide different viewpoints from different
+domain perspectives. \end{itemize}
 
 \section{A Priori Situational Awareness Framework for Stereotyping Human Roles}
 
-This section introduces a bridging framework, grounded within the taxonomic
-factors defined in previous section, which helps in assessing if the system
-design fulfills the mode of interaction being established between the human
-and the robot. We do this by stereotyping the expected knowledge levels of
-the human collaborator, stereotyped in a certain role within the boundaries
-of the specified system, and compare this with the required knowledge
-associated with the successful execution of the interaction relationship. We
-categorize these knowledge levels along the same main axes which we used to
-establish our taxonomy, i.e., task-work knowledge, team-work knowledge, and
-environment/situated-workspace knowledge. As we mentioned earlier, the axes
-defined are not entirely independent of each other, there is some effect
-either of scope or of correlation which exists between the task being done
-and the workspace or the team choices for it, or vice versa. This section
-helps in understanding these relationships and organizes them in a tier-based
-framework of knowledge levels.
+This section introduces a bridging framework, grounded within the taxonomic factors defined in
+the previous section, which helps in assessing if the system design fulfills the mode of
+interaction that is established between the human and the robot. We do this by stereotyping the
+expected knowledge levels of the human collaborator, stereotyped in a certain role within the
+boundaries of the specified system, and compare this with the required knowledge associated with
+the successful execution of the interaction relationship. We categorize these knowledge levels
+along the same main axes which we used to establish our taxonomy, i.e., task-work knowledge,
+team-work knowledge, and environment/situated-workspace knowledge. As we mentioned earlier, the
+axes defined are not entirely independent of each other, there is some effect either of scope or
+of correlation which exists between the task being done and the workspace or the team choices for
+it, or vice versa. This section helps in understanding these relationships and organizes them in
+a tier-based framework of knowledge levels.
+
+Depending upon the `focus` of the task and whether the task is operating in normal or subnominal
+state, one can establish the `nature` of interaction that will be required to complete the
+task-work. Let's consider the capture-the-flag example the area coverage sub-task is one which
+requires mainly physical cooperation within the team. On the other hand, a defend-the-flag
+sub-task, which is of physical nature when a strategy is already agreed upon, can switch to a
+sub-nominal state when the defense perimeter is breached and is elevated to a cognitive task
+where a new strategy needs to be decided on before being physically actuated by the players. A
+change in the nature of team-work inevitably entails a subsequent change in the nature of
+communication between the players, which means a different set of sensing and reasoning capabilities
+are required for the changed sub-task. The design of an HRI system should be able to satisfy the
+largest such set of mobile, perception, and communication capabilities as well as the infrastructure
+to establish the required information exchange protocols. In a very similar way, depending upon the
+team-work between a human and a robot depending upon if the interaction is established with a peer
+or a supervisor and whether it is in nominal or sub-nominal status, a similar set of rules dictate a
+necessitated change in the quality of information being exchanged between the two interactants. This
+section stereotypes the roles defined in \citet{Goodrich2007,Scholtz2003} by grounding their
+expected knowledge levels for interactions to hold up in nominal conditions. This also creates a
+hard boundary of what can be considered a sub-nominal state of interaction and might require a
+change in the edges of the interaction graph where interactants are nodes and an edge exists
+between two nodes if they are interacting.
+
 
 \subsection{Julie's Comments on A Priori SA Section}
 
 Just to keep track
 
-\begin{center}
-  \begin{tabular}{c | c}
-    \hline
-    Does this task axis related to "Knowledge" or he task? Do you mean tactical
-    knowledge on how to perform a task? When I saw the category task I thought
-    you would be defining characteristics of the task, rather than knowledge for
-    different ways to do it & This makes me think we should have a better
-    introduction to what does the A priori SA mean and does in the current scope
-    \\
-    Multiple comments on clarity of role definition & This draft will focus on
-    this \\
-    Why is a certain knowledge level lowest or highest? & There should be either
-    a diagram or some reference to the taxonomy to make this more intuitive \\
-  \end{tabular}
-\end{center}
+\begin{center} \begin{tabular}{c | c} \hline Does this task axis related to "Knowledge" or he
+task? Do you mean tactical knowledge on how to perform a task? When I saw the category task I
+thought you would be defining characteristics of the task, rather than knowledge for different
+ways to do it & This makes me think we should have a better introduction to what does the A
+priori SA mean and does in the current scope \\ Multiple comments on clarity of role definition &
+This draft will focus on this \\ Why is a certain knowledge level lowest or highest? & There
+should be either a diagram or some reference to the taxonomy to make this more intuitive \\
+\end{tabular} \end{center}
 
 \end{document}
