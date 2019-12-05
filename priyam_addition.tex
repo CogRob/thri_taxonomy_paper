@@ -97,7 +97,7 @@
 }{}
 }
 
-\bibliography{rexam}
+\bibliography{rexam.bib}
 
 \title{\LARGE \bf
 A Taxonomy for Characterizing Modes of Interactions in Goal-driven, Human-robot Teams
@@ -134,9 +134,9 @@ Priyam Parashar, Lindsay M. Sanneman, Julie A. Shah, Henrik I. Christensen
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-
-This document contains the edits to the taxonomy as well as the changes to a priori sa framework. Additionally, the a priori sa is then further intertwined into the dynamic factors of the taxonomy to create a more grounded framework.
-
+This document contains the edits to the taxonomy as well as the changes to a
+priori sa framework. Additionally, the a priori sa is then further intertwined
+into the dynamic factors of the taxonomy to create a more grounded framework.
 \end{abstract}
 
 
@@ -144,6 +144,58 @@ This document contains the edits to the taxonomy as well as the changes to a pri
 
 \section{Edits to Taxonomy}
 
-The main article that I found and had material contributions to the taxonomy is the one by \citet{moya2007towards}.
+\subsection{Additions}
+
+The main article that I found and had material contributions to the taxonomy is
+the one by \citet{moya2007towards}. The taxonomy takes a holistic view of a
+multi-system environment and considers the following three components as overall
+description of the system:
+\begin{itemize}{}
+  \item Situated environment
+    \begin{itemize}{}
+        \item Closure - If agents defined outside the system can still affect
+        the environment
+        \item Dynamism - Whether the environment is affected by just the system
+        (static) or because of randomness/open environment (dynamic)
+        \item Determinism - If actions always have a deterministic outcome over
+        time, sort of like environment stationarity
+        \item Cardinality - Size of environment, affected agents and objects
+        (finite, finite uncountable, infinite, etc.)
+    \end{itemize}
+    \item Population
+    \begin{itemize}{}
+      \item Size
+      \item Diversity
+      \item Homogeneity
+      \item Goal structure
+      \item Cooperability
+    \end{itemize}
+  \item Agent characteristics
+    \begin{itemize}{}
+      \item Reasoning
+      \item Perception
+      \item Action
+    \end{itemize}
+\end{itemize}
+
+I found multiple evidence in literature that capabilities are
+always abstracted one way or the other. We can leverage this trend to propose
+mobile, perception and reasoning bins which if present/absent represent an
+agent's capabilities. TK: references of papers I found this in. The paper
+mentioned in the previous paragraph also has a taxonomy spelling out bins for
+perception and communication categories.
+
+To bring back the papers we have already included, I thought the \texttt{phys_proximity}
+categories in \citet{yanco2004updated} made a lot of sense for associating the
+environment or workspace configurations to the physical nature of tasks.
+
+\subsection{Changes}
+\begin{itemize}{}
+  \item ``Criticality'' should be further broken down into risk versus mission
+    criticality. Mission criticality can be grounded into Lindsay's co-design
+    method while the risk scale can be better informed by robot risk scales.
+\end{itemize}
+
+\section{A Priori Situational Awareness Framework for Stereotyping Human Roles}
 
 \end{document}
