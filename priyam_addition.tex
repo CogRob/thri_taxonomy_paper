@@ -118,12 +118,12 @@ considers the following three components as overall description of the system:
 \begin{itemize}{}
   \item Situated environment
     \begin{itemize}{}
-      \item Closure - If agents defined outside the system can still affect the environment
-      \item Dynamism - Whether the environment is affected by just the system (static) or because of
+      \item Closure -- If agents defined outside the system can still affect the environment
+      \item Dynamism -- Whether the environment is affected by just the system (static) or because of
         randomness/open environment (dynamic)
-      \item Determinism - If actions always have a deterministic outcome over time, sort of like
+      \item Determinism -- If actions always have a deterministic outcome over time, sort of like
         environment stationarity
-      \item Cardinality - Size of environment, affected agents and objects (finite, finite
+      \item Cardinality -- Size of environment, affected agents and objects (finite, finite
         uncountable, infinite, etc.)
     \end{itemize}
   \item Population
@@ -183,8 +183,8 @@ between the task being done and the workspace or the team choices for it, or vic
 section helps in understanding these relationships and organizes them in a tier-based framework of
 knowledge levels.
 
-Depending upon the `focus` of the task and whether the task is operating in normal or subnominal
-state, one can establish the `nature` of interaction that will be required to complete the
+Depending upon the \texttt{focus} of the task and whether the task is operating in normal or subnominal
+state, one can establish the \texttt{nature} of interaction that will be required to complete the
 task-work. Let's consider the capture-the-flag example the area coverage sub-task is one which
 requires mainly physical cooperation within the team. On the other hand, a defend-the-flag sub-task,
 which is of physical nature when a strategy is already agreed upon, can switch to a sub-nominal
@@ -241,16 +241,16 @@ current sub-task can be collaborated on with the selected human.
 
 This is a uni-dimensional scale which is organized into the following bins:
 \begin{itemize}{}
-  \item Physical or tactical knowledge about actuating the sub-task which is necessary for a task of
+  \item \textbf{ Physical or tactical } knowledge about actuating the sub-task which is necessary for a task of
     physical nature
-  \item Conceptual or operational knowledge about which features in the environment, and the team
+  \item \textbf{ Conceptual or operational } knowledge about which features in the environment, and the team
     collaboration affect the subtask. We map this level to cognitive-perceptual nature of tasks as
     such roles have an understanding of which features from the environment or team must be included
     or excluded for the task to be successful, thus affecting the short-term execution and
     interactions.
-  \item Strategic knowledge about the over-arching mission priorities, which is mapped to
+  \item \textbf{ Strategic } knowledge about the over-arching mission priorities, which is mapped to
     cognitive-reasoning nature of tasks.
-  \item Social knowledge about the outward appearance of the system, which is mapped to social
+  \item \textbf{ Social } knowledge about the outward appearance of the system, which is mapped to social
     nature of sub-tasks.
 \end{itemize}
 
@@ -263,16 +263,16 @@ that the intended interaction, as stereotyped by the role, can be successfully e
 executed. In the following bins everytime we mean the knowledge of something with respect to the
 robot's mechanisms. Going from most sparse to most dense mental model:
 \begin{itemize}{}
-  \item None \- The only knowledge is conditioned on the form or appearance of the robot, thus
+  \item None -- The only knowledge is conditioned on the form or appearance of the robot, thus
     making roles with this kind of knowledge more suitable for sub-tasks which do not require
     specialized knowledge.
-  \item Functional \- Knowledge of the physical and reasoning capabilities and limitations, which
+  \item Functional -- Knowledge of the physical and reasoning capabilities and limitations, which
     makes roles at this level more appropriate for goal-setting and resource management tasks in the
     system.
-  \item Behavioral \- Knowledge of how the physical behaviors and reasoning capabilities manifest
+  \item Behavioral -- Knowledge of how the physical behaviors and reasoning capabilities manifest
     together to fulfill functionality. The roles at this level have enough knowledge to participate
     and intervene with the planning and actuation system of the agent.
-  \item Internal \- Knowledge of how the physical and cognitive behaviors, interactions and commands
+  \item Internal -- Knowledge of how the physical and cognitive behaviors, interactions and commands
     affect the internal state and vice-versa. Usually the mental model assigned to developers and
     debuggers of the software and the hardware.
 \end{itemize}
@@ -289,11 +289,41 @@ possible. Therefore the most viable operator would be the one with past experien
 and understanding of how the robot represents environments and its artifacts (behavioral mental
 model). Going from most to least knowledge levels:
 \begin{itemize}{}
-  \item Exact Knowledge \- The human has worked in the exact environment with the exact artifacts
+  \item Exact Knowledge -- The human has worked in the exact environment with the exact artifacts
     before
-  \item Heuristic Knowledge \- The human has worked in similar environments before and possesses
+  \item Heuristic Knowledge -- The human has worked in similar environments before and possesses
     heuristic knowledge of how to operate in it
-  \item No Knowledge \- The current environment is entirely new to the human
+  \item No Knowledge -- The current environment is entirely new to the human
+
+\end{itemize}
+
+\subsection{Stereotyping Roles Grounded in APSA Knowledge Levels}
+
+The three categories or axes described in the previous section provide the guiding functions to the
+questions of whom to address a task, team or environment-centric issue to, what level of guidance to
+expect in return and at what level of abstraction should the current state of the robotics agent be
+translated to so that it makes sense to both the interactants. \citeauthor[]{Scholtz2003} in her
+\citeyear[]{Scholtz2003} paper does a similar analysis of roles with respect to the 7 layer HCI
+model proposed by Donald Norman, the current work is a natural extension of the same grounding it in
+taxonomic bins and knowledge structures for dynamic evaluation.
+
+We propose the following stereotypes of roles to answer these questions:
+\begin{itemize}{}
+  \item \textbf{Operator} -- This definition of an operator is different from
+    the usual tele-operator definition we've been referring to in previous sections.
+  \item \textbf{Mechanic} -- Like an operator but debugs hardware with software
+    interventions and hooks.
+  \item \textbf{Peer} -- Peers usually interact with the agent to change or
+    update its short-term actions and plans, within the boundaries of the
+    priorities set by the supervisor.
+  \item \textbf{Supervisor} -- Can be further broken up into:
+    \begin{itemize}{}
+      \item Tele-operator
+      \item Mission Supervisor
+    \end{itemize}
+  \item \textbf{Mentor}
+  \item \textbf{Information Consumer}
+  \item \textbf{Bystander}
 
 \end{itemize}
 
@@ -303,7 +333,7 @@ model). Going from most to least knowledge levels:
     \hline \\
     \textbf{Comment} & \textbf{Response} \\
     \hline \\
-    A. Does this task axis related to "Knowledge" or he task? Do you mean tactical knowledge on how to
+    A. Does this task axis related to ``Knowledge'' or he task? Do you mean tactical knowledge on how to
     perform a task? When I saw the category task I thought you would be defining characteristics of
     the task, rather than knowledge for different ways to do it & This makes me think we should
                                                                   have a better introduction to what does the A priori SA mean and does in the current scope \\
