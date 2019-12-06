@@ -309,23 +309,47 @@ taxonomic bins and knowledge structures for dynamic evaluation.
 
 We propose the following stereotypes of roles to answer these questions:
 \begin{itemize}{}
-  \item \textbf{Operator} -- This definition of an operator is different from
-    the usual tele-operator definition we've been referring to in previous sections.
-  \item \textbf{Mechanic} -- Like an operator but debugs hardware with software
-    interventions and hooks.
-  \item \textbf{Peer} -- Peers usually interact with the agent to change or
-    update its short-term actions and plans, within the boundaries of the
-    priorities set by the supervisor.
+  \item \textbf{Operator} -- This definition of an operator is different from the usual
+    tele-operator definition we've been referring to in previous sections. This operator is
+    basically a software debugger who ensures that the robot is reacting to commands as it should.
+    Internal knowledge of mental model of the robot necessary, exact (sandboxed experiments) to
+    heuristic knowledge about environment, some physical and rigorous operational task knowledge
+    necessary.
+  \item \textbf{Mechanic} -- Like an operator but debugs hardware with software interventions and
+    hooks. Similar stereotype as operator, rigorous physical knowledge required.
+  \item \textbf{Peer} -- Peers usually interact with the agent to change or update its short-term
+    actions and plans, within the boundaries of the priorities set by the supervisor. Functional to
+    behavioral mental model required depending upon degree of collaboration, mostly uses visual or
+    higher-level communication cues to interact, exact to heuristic knowledge of environment. Novel
+    environment collaborations are possible where the peer has zero environmental knowledge, but not
+    very common in current HRI landscape. Usually have operational knowledge of tasks being
+    undertaken, treated as experts, or at least experienced, in current literature.
   \item \textbf{Supervisor} -- Can be further broken up into:
     \begin{itemize}{}
       \item Tele-operator
       \item Mission Supervisor
     \end{itemize}
-  \item \textbf{Mentor}
-  \item \textbf{Information Consumer}
-  \item \textbf{Bystander}
-
+  \item \textbf{Mentor} -- TK
+  \item \textbf{Information Consumer} -- TK
+  \item \textbf{Bystander} -- TK
 \end{itemize}
+
+\subsection{A Priori Situational Awareness and Taxonomic Effects}
+
+Now that we have stereotyped each role, we can hierarchically categorize the 10 LoRAs into ranges
+which are applicable to perception versus physical versus reasoning tasks. Depending upon the
+criticality of the task the agents can now dynamically decide on which side of the LoRA spectrum
+should the robotic agent operate.
+
+Similarly, the mental model scale of APSA framework directly corresponds to levels of information
+abstraction. I suggest doing one mini review to find out how plans or instructions are abstracted in
+robotics literature and connect the mental models with those abstraction tiers. The overall process
+flow is described in the following diagram:
+
+\begin{figure}
+  \includegraphics{apsa.png}
+  \caption{Process Flow from Taxonomy to Interaction Requirements}
+\end{figure}
 
 \begin{table*}
   \caption{Julie's Comments}
