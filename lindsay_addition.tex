@@ -145,7 +145,7 @@ As robots and other autonomous agents are incorporated into increasingly complex
 \section{INTRODUCTION}
 
 \section{Application of the Taxonomy to Real-World Applications}
-In the previous section, we introduce a taxonomy over factors impacting interaction in heterogeneous teams. These include contextual factors which cover characteristics of problem inputs, dynamics factors which include different characteristics of decisions made in terms of problem approach, and effects which are the resultant requirements on interaction given the context and dynamics. In this section we introduce a design process, drawing from the Cognitive Work Analysis (CWA) and co-active design literature, by which contextual factors can be linked to the decision of dynamics factors which in turn influence the effects. The overview of this process is depicted in figure \ref{fig:tax_design}.
+In the previous section, we introduce a taxonomy over factors impacting interaction in heterogeneous teams. These include contextual factors which cover characteristics of problem inputs, dynamics factors which include different characteristics of decisions made in terms of problem approach, and effects which are the resultant requirements on interaction given the context and dynamics. In this section we introduce a design process, drawing from the Cognitive Work Analysis (CWA) and co-active design literature, by which contextual factors can be linked to the decision of dynamics factors which in turn influence the effects. The overview of this process is depicted in figure \ref{fig:tax_design}. 
 
     \begin{figure}[tb]
     \centering
@@ -154,10 +154,21 @@ In the previous section, we introduce a taxonomy over factors impacting interact
     \label{fig:tax_design}
     \end{figure}
 
-Following from work in co-active design, steps in this process include creation of an abstraction hierarchy, determination of observability, comprehensibility, predictability, and directability (OCPD) requirements, and interdependence analysis. Contextual factors act as inputs to all steps in the process, and decision of dynamics factors and effects are the outputs. We first detail each of these steps and then present three domain examples including a capture-the-flag scenario, a rover planning scenario, and an autonomous vehicle scenario to demonstrate the application of this process.
+Following from work in co-active design, steps in this process include creation of an abstraction hierarchy, determination of observability, comprehensibility, predictability, and directability (OCPD) requirements, and interdependence analysis. Contextual factors act as inputs to all steps in the process, and decision of dynamics factors and effects are the outputs. We first detail each of these steps and then present two domain examples including a rover planning scenario and an autonomous vehicle scenario to demonstrate the application of our overall taxonomy and this process. In the discussion of each of the steps in our proposed process, we will draw on a capture-the-flag example scenario.
+
+In the capture-the-flag domain, we consider a scenario in which two teams each protect a flag in their own territory while attempting to capture the other team's flag in that team's territory. Team members who enter into the enemy team's territory and are tagged by an enemy team member are eliminated from the game. The first team to capture the enemy team's flag and successfully return it to their own territory wins the game. We ground the capture-the-flag scenario in the RoboFlag testbed domain introduced by D`Andrea and Babish [cite this]. In their setup, two teams of 6-10 robots and 2 people apiece in a hybrid simulated-physical environment are each trying to cross into the opponent’s territory, capture their flag, and return to their own territory while evading the enemy team. Some of the primary challenges this domain poses are that teammates have limited sensing capabilities, there is distributed processing of information, and there are limited bandwidth capabilities.
+
 
 \subsection{Abstraction Hierarchy}
-The CWA literature introduces the idea of an Abstraction Hierarchy (AH) for decomposition of domain goals and tasks required to support those goals for a given mission or high-level task [CITE CWA literature + applied decision science]. Goals and tasks are represented at different levels of abstraction including mission goals, priorities and values, generalized functions, and temporal functions. An example Abstraction Hierarchy for a [FILL IN] scenario is shown in Figure [FILL IN]. 
+The CWA literature introduces the idea of an Abstraction Hierarchy (AH) for decomposition of domain goals and tasks required to support those goals for a given mission or high-level task [CITE CWA literature + applied decision science]. Goals and tasks are represented at different levels of abstraction including mission goals, priorities and values, generalized functions, and temporal functions. An example of the top three levels of the Abstraction Hierarchy (excluding the lowest-level temporal functions) for the capture-the-flag scenario is shown in Figure \ref{fig:ctfah}. Examples of temporal functions at the lowest level of the Abstraction Hierarchy for the capture-the-flag scenario are detailed in examples in sections \ref{sec:OCPD} and \ref{sec:IA}.
+
+   
+    \begin{figure*}[tb]
+    \centering
+    \includegraphics[width=\textwidth]{ctfAH.png}
+   \caption{Abstraction Hierarchy for Capture the Flag Scenario}
+    \label{fig:ctfah}
+    \end{figure*}
 
 We propose development of an Abstraction Hierarchy as the first step of the analysis process for determining dynamics factors and resultant effects from the inputted contextual factors. As heterogeneous teams aim to achieve increasingly complex tasks in complex domains, different team members will need information at different levels of abstraction. The Abstraction Hierarchy provides a framework from which to determine different possible levels of abstraction of information for communication between teammates or sub-teams. 
 
@@ -167,6 +178,7 @@ Contextual factors inform the definition of the abstraction hierarchy at all lev
 In conjunction with analysis of observability, comprehensibility, predictability, and directability requirements and the interdpendence analysis, task allocation can be done at different levels of abstraction depending on team capabilities through consideration of the Abstraction Hierarchy. Assigning tasks at a higher level of abstraction allows teams or individuals greater flexibility in how they execute tasks, while assigning tasks at a lower level of abstraction provides teams or individuals more detailed instructions as how to how execute a task when necessary. In other words, there is a trade-off between pre-planning and flexibility in the task allocation aspect of mission planning.
 
 \subsection{Observability, Comprehensibility, Predictability, and Directability Requirements}
+\label{sec:OCPD}
 [Cite co-active design] propose the consideration of observability, predictability, and directability (OPD) requirements in the determination of how a task should be structured for a joint activity. These are requirements that go beyond taskwork requirements and are necessary for the support of accomplishment of a joint activity through mutual understanding and influence between teammates. 
 
 [Cite CAD] define observability as making pertinent aspects of one’s status, as well as one’s knowledge of the team, task, and environment observable to others. They define predictability as the need for one’s actions to be predictable enough that others can reasonably rely on them when considering their own actions. Finally, they define directability as one’s ability to direct the behavior of others and complementarily be directed by others. 
@@ -179,6 +191,7 @@ As with the definition of the abstraction hierarchy, contextual factors inform t
 %Note: need to add in something about observability requirements corresponding to both what needs to be observed and what needs to be observabile, etc 
 
 \subsection{Interdependence Analysis}
+\label{sec:IA}
 [cite CAD] further proposes an Interdependence Analysis (IA) process to determine team decomposition and task allocation. Specifically, they introduce the concept of an IA table in which capacities required for each task and considered in conjunction with team member capabilities to determine different possible team structures for approaching a joint task (see figure [X]). While in their work, OPD requirements are derived from the connections between subtasks, we see OCPD requirements as part of the capacities required for each task as determined by the abstraction hierarchy and include them as requirements in the IA table. The output of the IA process is the enumeration of various possible team decompositions with corresponding task allocations that are feasible assignments for task execution. Drawing from the abstraction hierarchy, in this step, tasks can be considered at different levels of abstraction as necessary. 
 
 \subsection{Tying Context to Dynamics and Effects}
@@ -189,8 +202,8 @@ The process of creating an abstraction hierarchy, determining OCPD requirements,
 \subsection{Domain Examples}
 In the following section we detail three examples in which we apply our analysis method to a capture the flag domain, a rover planning domain, and an autonomous vehicle domain. 
 \begin{enumerate}
-\item Capture the Flag Example Domain
-\\In the capture-the-flag domain, we consider a scenario in which two teams each protect a flag in their own territory while attempting to capture the other team's flag in that team's territory. Team members who enter into the enemy team's territory and are tagged by an enemy team member are eliminated from the game. The first team to capture the enemy team's flag and successfully return it to their own territory win the game. We ground the capture-the-flag scenario in the RoboFlag testbed domain introduced by D`Andrea and Babish {cite}. In their setup, two teams of 6-10 robots and 2 people apiece in a hybrid simulated-physical environment are each trying to cross into the opponent’s territory, capture their flag, and return to their own territory while evading the enemy team. This domain demonstrates human-robot interaction at high speeds in dynamic, unstructured environments. Some of the challenges this domain poses are that teammates have limited sensing capabilities, there is distributed processing of information, and there are limited bandwidth capabilities.
+%\item Capture the Flag Example Domain
+%\\In the capture-the-flag domain, we consider a scenario in which two teams each protect a flag in their own territory while attempting to capture the other team's flag in that team's territory. Team members who enter into the enemy team's territory and are tagged by an enemy team member are eliminated from the game. The first team to capture the enemy team's flag and successfully return it to their own territory win the game. We ground the capture-the-flag scenario in the RoboFlag testbed domain introduced by D`Andrea and Babish {cite}. In their setup, two teams of 6-10 robots and 2 people apiece in a hybrid simulated-physical environment are each trying to cross into the opponent’s territory, capture their flag, and return to their own territory while evading the enemy team. This domain demonstrates human-robot interaction at high speeds in dynamic, unstructured environments. Some of the challenges this domain poses are that teammates have limited sensing capabilities, there is distributed processing of information, and there are limited bandwidth capabilities.
 
 %The operational context that we use to ground our approach is the RoboFlag testbed domain introduced by D`Andrea and Babish \cite{d2003roboflag}. This domain demonstrates human-robot interaction at high speeds in dynamic, unstructured environments and thus provides a rich context for exploration of these topics. The RoboFlag testbed emulates a capture-the-flag scenario in which two teams of 6-10 robots and 2 people apiece in a hybrid simulated-physical environment are each trying to cross into the opponent’s territory, capture their flag, and return to their own territory while evading the enemy team. In this domain, the human and robot teammates need to interact at speed in an environment with limited sensing capabilities, distributed processing of information, and limited bandwidth capabilities In our analysis, we divide this scenario into ``scout" and ``defend" stages with subteams dedicated to each stage.
 %Add text and citation from the workshop paper here.
@@ -230,13 +243,6 @@ In the following section we detail three examples in which we apply our analysis
     
     The high-level mission goal in this scenario is to capture the opponent team's flag while preventing the opponent team from capturing your team's flag first. At the second level, the priorities and values are to ``protect our flag'' and ``capture the other team's flag''.
     
-   
-    \begin{figure}[tb]
-    \centering
-    \includegraphics[width=\columnwidth]{ctfAH.png}
-   \caption{Abstraction Hierarchy for Capture the Flag Scenario}
-    \label{fig:ctfah}
-    \end{figure}
 
     \item Observability, Comprehensibility, Predictability, and Directability Requirements
     \\Here we detail the definition of OCPD requirements for a subset of the boxes at each level of the hierarchy to demonstrate how such requirements can be defined and used in analysis. We further use this subset in our interdependence analysis in section d.
@@ -275,6 +281,7 @@ In the following section we detail three examples in which we apply our analysis
 
 
 \item Rover Planning Example Domain
+\\[Smith, 2012] introduces the Mars Exploration Rover activity planning domain in which a group of science and engineering sub-teams with potentially competing preferences work together to develop the rover’s tactical activity plan. Throughout the planning process, information is aggregated through complex coordination structures between sub-teams and a resultant time-consuming iterative planning process. [Smith, 2012] highlights the need to integrate automated planning into an iterative process that begins before goals, objectives, and preferences are fully defined and outlines the technical implications for planning, including the need to naturally specify and utilize constraints in the planning process, generate multiple qualitatively different plans for analysis, and provide explanation of planning decisions.
 
 \begin{enumerate}
     \item Contextual Factors: Problem Inputs
@@ -293,7 +300,7 @@ In the following section we detail three examples in which we apply our analysis
     \item Tying Context to Dynamics and Effects
 \end{enumerate}
 
-\item Autonomous Car Example Domain
+\item USAR Domain
 
 \begin{enumerate}
     \item Abstraction Hierarchy
@@ -304,8 +311,79 @@ In the following section we detail three examples in which we apply our analysis
 
 \end{enumerate}
 
+\newpage
 
 \section{Other Thoughts on Categorizations}
+\subsection{Task Factors - Context}
+\textbf{Objective:} In the process of defining an abstraction hierarchy for a given mission, mission priorities and values are defined. The priorities and values support the overall mission goal and are supported by generalized functions, which are essentially mission tasks. The high-level objectives or priorities and values that tasks are supporting connect them to other tasks that support the same objectives, which might dictate how information-sharing needs to take place between individual or sub-teams executing each task. Objectives might also have different priorities, which can then determine the priorities of the tasks that support them relative to other tasks. Task priorities will impact how resources are allocated when dynamics factors are assigned. 
+
+Some example objectives include:
+\begin{itemize}
+    \item Safety
+    \item Efficiency
+    \item Cost Minimization
+    \item Learning
+    \item Completeness (Coverage)
+\end{itemize}
+
+%(Beer paper talks about objectives I think - task focus) 
+
+\subsection{Environment Factors - Context}
+\textbf{Stress Level:} While autonomous agents are not impacted in their ability to perform tasks based on the level of stress in a given context, human teammates are impacted by stress. One example of this is that a human maybe have more difficulty performing tasks late at night, with little sleep, or if it is an emergency scenario. We define three categories for stress levels accordingly:
+\begin{itemize}
+    \item Low Stress
+    \item Normal Stress
+    \item High Stress
+\end{itemize}
+
+%(Robin Murphy paper?) 
+
+\textbf{Normal/Off-Normal Situation:} The normal/off-normal category describes whether the operating conditions for the mission are normal or off-normal(cite Robin Murphy paper here). 
+
+\textbf{Mobility constraints:} The mobility constraints category describes whether team members' mobility will be restricted due to environmental features. For example, if terrain is highly variable, it might be more difficult for a team member to navigate than if it is uniform and smooth. We define three categories for mobility constraints:
+\begin{itemize}
+    \item None
+    \item Partial
+    \item Full
+\end{itemize}
+
+\textbf{Perception constraints:} Similar to the mobility constraints category, the perception constraints category describes whether team members' perception capabilities will be restricted due to environmental factors. One example of restricted perception would be limited use of cameras in foggy weather. As with mobility constraints, we define three categories for perception constraints:
+\begin{itemize}
+    \item None
+    \item Partial
+    \item Full
+\end{itemize}
+
+\textbf{Communication constraints:} The communication constraints, like mobility and perception constraints, determines whether communication will be restricted due to environmental factors. One example of this might be restricted communications in an environment with limited bandwidth. Like with mobility and perception constraints, we define three categories for communication constraints:
+\begin{itemize}
+    \item None
+    \item Partial
+    \item Full
+\end{itemize}
+
+\subsection{Team Factors - Context}
+Mental models: I think we said this would be captured with a-priori SA?
+
+Capabilities? We still need buckets for these things.
+
+%\subsection{Task Factors - Dynamics}
+
+\subsection{Effects}
+\textbf{Load:}\\
+\textbf{Cognitive load:} Given the contextual factors and chosen dynamics, each team member will have given cognitive requirements for performing the tasks that they are assigned. For autonomous agents, these are computational requirements, and for humans, these are simply cognitive processing requirements. Performance decrements may occur if a teammate is cognitively overloaded and experiences perceptual narrowing (cite). However, according to the Yerkes-Dodson law (cite here), performance can also suffer if a person is under-loaded cognitively and experiences attention lapses. Therefore, we define three categories for cognitive load:
+\begin{itemize}
+    \item Under-loaded
+    \item Appropriately loaded
+    \item Overloaded
+\end{itemize}
+
+\textbf{Physical load:} Given the contextual factors and chosen dynamics, each team member will have given physical requirements for performing their tasks in addition to the cognitive requirements. Team members need to be physically capable enough to perform the tasks they are assigned, or else they will need to ask for and wait on help from other team members. For example, if a robot can carry a 10 kg payload, if it is assigned a task that involves carrying something that weighs 20 kg, it will depend on other teammates to perform that task and will need to ask for help. We therefore define two categories to describe physical load:
+\begin{itemize}
+    \item Appropriate loading
+    \item Overloading
+\end{itemize}
+
+
 
 \printbibliography
 
