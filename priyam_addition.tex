@@ -122,36 +122,36 @@ multi-system environment and considers the following three components as overall
 description of the system:
 \begin{itemize}{}
   \item Situated environment
-    \begin{itemize}{}
-      \item Closure --- If agents defined outside the system can still affect
-        the R environment
-      \item Dynamism --- Whether the environment is affected by just the system
-        (static) or because of randomness/open environment (dynamic)
-      \item Determinism --- If actions always have a deterministic outcome over
-        time, sort of like environment stationarity
-      \item Cardinality --- Size of environment, affected agents and objects
-        (finite, finite uncountable, infinite, etc.)
-    \end{itemize}
+        \begin{itemize}{}
+          \item Closure --- If agents defined outside the system can still affect
+                the R environment
+          \item Dynamism --- Whether the environment is affected by just the system
+                (static) or because of randomness/open environment (dynamic)
+          \item Determinism --- If actions always have a deterministic outcome over
+                time, sort of like environment stationarity
+          \item Cardinality --- Size of environment, affected agents and objects
+                (finite, finite uncountable, infinite, etc.)
+        \end{itemize}
   \item Population
-    \begin{itemize}{}
-      \item Size
-      \item Diversity
-      \item Homogeneity
-      \item Goal structure
-      \item Cooperability
-    \end{itemize}
+        \begin{itemize}{}
+          \item Size
+          \item Diversity
+          \item Homogeneity
+          \item Goal structure
+          \item Cooperability
+        \end{itemize}
   \item Agent characteristics
-    \begin{itemize}{}
-      \item Reasoning
-      \item Perception
-      \item Action
-    \end{itemize}
+        \begin{itemize}{}
+          \item Reasoning
+          \item Perception
+          \item Action
+        \end{itemize}
 \end{itemize}
 
 I found multiple evidence in the literature that capabilities are always
 abstracted one way or the other. We can leverage this trend to propose mobile,
 perception and reasoning bins which if present/absent represent an agent's
-capabilities. TK\: references of papers I found this in. The paper mentioned in
+capabilities. TK:\@ references of papers I found this in. The paper mentioned in
 the previous paragraph also has a taxonomy spelling out bins for perception and
 communication categories.
 
@@ -163,20 +163,20 @@ physical nature of tasks.
 \subsection{Changes}
 \begin{itemize}{}
   \item ``Criticality'' should be further broken down into risk versus mission
-    criticality. Mission criticality can be grounded into Lindsay's co-design
-    method while the risk scale can be better informed by robot risk scales.
+        criticality. Mission criticality can be grounded into Lindsay's co-design
+        method while the risk scale can be better informed by robot risk scales.
   \item Another thing I realized was that environment is too broad a category,
-    maybe that is why we never saw much specification for it. Might we change
-    ours to ``situated workspace''. I think this terminology has better relation
-    to what we actually define in our taxonomy.
+        maybe that is why we never saw much specification for it. Might we change
+        ours to ``situated workspace''. I think this terminology has better relation
+        to what we actually define in our taxonomy.
   \item Given that levels of autonomy divides levels between sensing, acting and
-    planning, we should maybe expand the Cognitive Task Nature category further
-    into perception and reasoning.
+        planning, we should maybe expand the Cognitive Task Nature category further
+        into perception and reasoning.
   \item We should also use a running example (maybe one of the two from the
-    case-study section) to ground our abstract statements into something
-    intuitive. Maybe we can use the complex capture-the-flag example as the main
-    running example while the rest is just added to provide different viewpoints
-    from different domain perspectives.
+        case-study section) to ground our abstract statements into something
+        intuitive. Maybe we can use the complex capture-the-flag example as the main
+        running example while the rest is just added to provide different viewpoints
+        from different domain perspectives.
 \end{itemize}
 
 \section{A Priori Situational Awareness Framework for Stereotyping Human Roles}
@@ -248,13 +248,13 @@ system.
 We will typify each role by assigning their:
 \begin{itemize}
   \item Expected task-work knowledge level which corresponds to the task nature
-    taxonomy,
+        taxonomy,
   \item Expected team-work knowledge which relates to their mental model of the
-    robot's mechanisms (similar to Donald Norman's mental model axis of the
-    interaction model)
+        robot's mechanisms (similar to Donald Norman's mental model axis of the
+        interaction model)
   \item Expected workspace knowledge which helps assess if the current
-    interactant has the right abstractions and knowledge in case of
-    environmental changes during operation
+        interactant has the right abstractions and knowledge in case of
+        environmental changes during operation
 \end{itemize}
 
 \subsubsection{Task-work Knowledge of Human Interactants}
@@ -268,18 +268,18 @@ collaborated on with the selected human.
 
 This is a uni-dimensional scale which is organized into the following bins:
 \begin{itemize}{}
-  \item \textbf{ Physical or tactical } knowledge about actuating the sub-task
-    which is necessary for a task of physical nature
-  \item \textbf{ Conceptual or operational } knowledge about which features in
-    the environment, and the team collaboration affect the subtask. We map this
-    level to cognitive-perceptual nature of tasks as such roles have an
-    understanding of which features from the environment or team must be
-    included or excluded for the task to be successful, thus affecting the
-    short-term execution and interactions.
-  \item \textbf{ Strategic } knowledge about the over-arching mission
-    priorities, which is mapped to cognitive-reasoning nature of tasks.
-  \item \textbf{ Social } knowledge about the outward appearance of the system,
-    which is mapped to social nature of sub-tasks.
+  \item \textit{ Physical or tactical } knowledge about actuating the sub-task
+        which is necessary for a task of physical nature
+  \item \textit{ Conceptual or operational } knowledge about which features in
+        the environment, and the team collaboration affect the subtask. We map this
+        level to cognitive-perceptual nature of tasks as such roles have an
+        understanding of which features from the environment or team must be
+        included or excluded for the task to be successful, thus affecting the
+        short-term execution and interactions.
+  \item \textit{ Strategic } knowledge about the over-arching mission
+        priorities, which is mapped to cognitive-reasoning nature of tasks.
+  \item \textit{ Social } knowledge about the outward appearance of the system,
+        which is mapped to social nature of sub-tasks.
 \end{itemize}
 
 \subsubsection{Team-work Knowledge of Human Interactants}
@@ -293,20 +293,20 @@ successfully established and executed. In the following bins everytime we mean
 the knowledge of something with respect to the robot's mechanisms. Going from
 most sparse to most dense mental model:
 \begin{itemize}{}
-  \item \textbf{None} --- The only knowledge is conditioned on the form or
-    appearance of the robot, thus making roles with this kind of knowledge more
-    suitable for sub-tasks which do not require specialized knowledge.
-  \item \textbf{Functional} --- Knowledge of the physical and reasoning
-    capabilities and limitations, which makes roles at this level more
-    appropriate for goal-setting and resource management tasks in the system.
-  \item \textbf{Behavioral} --- Knowledge of how the physical behaviors and
-    reasoning capabilities manifest together to fulfill functionality. The roles
-    at this level have enough knowledge to participate and intervene with the
-    planning and actuation system of the agent.
-  \item \textbf{Internal} --- Knowledge of how the physical and cognitive
-    behaviors, interactions and commands affect the internal state and
-    vice-versa. Usually the mental model assigned to developers and debuggers of
-    the software and the hardware.
+  \item \textit{None} --- The only knowledge is conditioned on the form or
+        appearance of the robot, thus making roles with this kind of knowledge more
+        suitable for sub-tasks which do not require specialized knowledge.
+  \item \textit{Functional} --- Knowledge of the physical and reasoning
+        capabilities and limitations, which makes roles at this level more
+        appropriate for goal-setting and resource management tasks in the system.
+  \item \textit{Behavioral} --- Knowledge of how the physical behaviors and
+        reasoning capabilities manifest together to fulfill functionality. The roles
+        at this level have enough knowledge to participate and intervene with the
+        planning and actuation system of the agent.
+  \item \textit{Internal} --- Knowledge of how the physical and cognitive
+        behaviors, interactions and commands affect the internal state and
+        vice-versa. Usually the mental model assigned to developers and debuggers of
+        the software and the hardware.
 \end{itemize}
 
 \subsubsection{Work-space Knowledge of Human Interactants}
@@ -323,13 +323,13 @@ the most viable operator would be the one with past experience of such missions
 and understanding of how the robot represents environments and its artifacts
 (behavioral mental model). Going from most to least knowledge levels:
 \begin{itemize}{}
-  \item \textbf{Exact Knowledge} --- The human has worked in the exact
-    environment with the exact artifacts before
-  \item \textbf{Heuristic Knowledge} --- The human has worked in similar
-    environments before and possesses heuristic knowledge of how to operate in
-    it
-  \item \textbf{No Knowledge} --- The current environment is entirely new to the
-    human
+  \item \textit{Exact Knowledge} --- The human has worked in the exact
+        environment with the exact artifacts before
+  \item \textit{Heuristic Knowledge} --- The human has worked in similar
+        environments before and possesses heuristic knowledge of how to operate in
+        it
+  \item \textit{No Knowledge} --- The current environment is entirely new to the
+        human
 
 \end{itemize}
 
@@ -347,78 +347,79 @@ taxonomic bins and knowledge structures for dynamic evaluation.
 
 We propose the following stereotypes of roles to answer these questions:
 \begin{itemize}{}
-  \item \textbf{Operator} --- The operator is a software debugger who ensures
-    that the robot is reacting to the behavioral and high-level commands as it
-    should. This necessitates that internal knowledge of the mental model of the
-    robot is necessary, exact (sandboxed experiments) to heuristic knowledge
-    about environment, some physical and rigorous operational task knowledge
-    necessary.
-  \item \textbf{Mechanic} --- Like an operator but debugs hardware with software
-    interventions and hooks. Similar stereotype as operator, rigorous physical
-    knowledge required.
-  \item \textbf{Peer} --- Peers usually interact with the agent to change or
-    update its short-term goals and plans, or to help with the execution of
-    short-term actions within the boundaries of the priorities set by the
-    supervisor. In theory, the distinctions between peer, supervisor and
-    teleoperators is very fuzzy however for the purposes of the current paper we
-    make a firm distinction where peers strictly collaborate in a shared-control
-    fashion, i.e.\ collaboration when the machine requires it independent of
-    whether it was human-initiated or robot-initiated and the peer has no say in
-    the overarching goals and purpose of the robot. This necessitates that
-    functional to behavioral mental model required depending upon degree of
-    collaboration, mostly uses visual or higher-level communication cues to
-    interact, exact to heuristic knowledge of environment. Novel environment
-    collaborations are possible where the peer has zero environmental knowledge,
-    but not very common in current HRI landscape. Usually have operational
-    knowledge of tasks being undertaken, treated as experts, or at least
-    experienced, in most of current literature. Certain studies treat them as
-    non-experts but the learning or collaboration in such context is strictly
-    limited to only a physical nature.
-  \item \textbf{Supervisor} --- Can be further broken up into:
-    \begin{itemize}{}
-      \item \textbf{Teleoperator} --- At this end of the supervisor spectrum the
-        machine and the human have a physical coupling, which could manifest
-        directly or via some teleoperated interface and device. The goal
-        decisions are strictly within the reign of the operator while the
-        sensing and actuation support is provided by the robot. Teleoperators
-        need to have at least a behavioral knowledge of the robot's mechanisms
-        specially when the machine affords limited autonomous corrections over
-        teleoperators commands, to maintain transparency. Additionally, the
-        teleoperator should be trained in the physical or tactical actuation of
-        the task at hand and needs at least a heuristic knowledge of the
-        environment to understand how to most efficiently steer the robot.
-      \item \textbf{Mission Supervisor} --- This is the more sophisticated end
-        of the supervisor spectrum and is defined by the existence of strictly
-        high-level communication between the human and the robot. Mission
-        supervisor can not only switch to the teleoperator spectrum, provided
-        they have the prerequisite know-how of the physical limitations of the
-        robot, to actuate a task but can also change the overarching priorities
-        of the machine to substantially change their plans and goals. Such a
-        drastic shift in the machine's goals and plans should not be afforded to
-        any other role. Under the provided definition the mission supervisor
-        should have at least a functional knowledge of the robot's mechanism, at
-        least a heuristic knowledge of the environment and is expected to hold a
-        strategic knowledge of the current task for the given domain.
-    \end{itemize}
-  \item \textbf{Mentor} --- This role was introduced to define a robot's
-    behavior when it is deployed as the subject matter expert to monitor, train
-    or educate human interactants. Depending upon the domain of interaction the
-    mentorship can vary anywhere from a physical to cognitive to social nature.
-    However, in any case the robot will be expected to have an exact knowledge
-    of the environment and at least a functional level of knowledge about how
-    the human interactants process the commands, corrections and instructions
-    provided by the robot. This is where Theory of Mind models come into play
-    when deciding on the level of sophistication of robot programming.
-  \item \textbf{Information Consumer} --- An information consumer may or may not
-    have stake in the mission being executed by the robot, however it is
-    expected that the human, or computing agent, will have a deep enough
-    knowledge about the overall structure of the mission such that he/she/it can
-    assimilate the data in an informative way. Therefore, it is expected the
-    information consumer will at least have a conceptual knowledge about the
-    tasks of the mission, possesses at least a functional knowledge of the
-    robot's mechanism to make sense of the data being provided, and can be
-    expected to operate in a novel environment.
-  \item \textbf{Bystander} --- TK
+  \item \textit{Operator} --- The operator is a software debugger who ensures
+        that the robot is reacting to the behavioral and high-level commands as it
+        should. This necessitates that internal knowledge of the mental model of the
+        robot is necessary, exact (sandboxed experiments) to heuristic knowledge
+        about environment, some physical and rigorous operational task knowledge
+        necessary.
+  \item \textit{Mechanic} --- Like an operator but debugs hardware with software
+        interventions and hooks. Similar stereotype as operator, rigorous physical
+        knowledge required.
+  \item \textit{Peer} --- Peers usually interact with the agent to change or
+        update its short-term goals and plans, or to help with the execution of
+        short-term actions within the boundaries of the priorities set by the
+        supervisor. In theory, the distinctions between peer, supervisor and
+        teleoperators is very fuzzy however for the purposes of the current paper we
+        make a firm distinction where peers strictly collaborate in a shared-control
+        fashion, i.e.\ collaboration when the machine requires it independent of
+        whether it was human-initiated or robot-initiated and the peer has no say in
+        the overarching goals and purpose of the robot. This necessitates that
+        functional to behavioral mental model required depending upon degree of
+        collaboration, mostly uses visual or higher-level communication cues to
+        interact, exact to heuristic knowledge of environment. Novel environment
+        collaborations are possible where the peer has zero environmental knowledge,
+        but not very common in current HRI landscape. Usually have operational
+        knowledge of tasks being undertaken, treated as experts, or at least
+        experienced, in most of current literature. Certain studies treat them as
+        non-experts but the learning or collaboration in such context is strictly
+        limited to only a physical nature.
+  \item \textit{Supervisor} --- Can be further broken up into:
+        \begin{itemize}{}
+          \item \textit{Teleoperator} --- At this end of the supervisor spectrum the
+                machine and the human have a physical coupling, which could manifest
+                directly or via some teleoperated interface and device. The goal
+                decisions are strictly within the reign of the operator while the
+                sensing and actuation support is provided by the robot. Teleoperators
+                need to have at least a behavioral knowledge of the robot's mechanisms
+                specially when the machine affords limited autonomous corrections over
+                teleoperators commands, to maintain transparency. Additionally, the
+                teleoperator should be trained in the physical or tactical actuation of
+                the task at hand and needs at least a heuristic knowledge of the
+                environment to understand how to most efficiently steer the robot.
+          \item \textit{Mission Supervisor} --- This is the more sophisticated end
+                of the supervisor spectrum and is defined by the existence of strictly
+                high-level communication between the human and the robot. Mission
+                supervisor can not only switch to the teleoperator spectrum, provided
+                they have the prerequisite know-how of the physical limitations of the
+                robot, to actuate a task but can also change the overarching priorities
+                of the machine to substantially change their plans and goals. Such a
+                drastic shift in the machine's goals and plans should not be afforded to
+                any other role. Under the provided definition the mission supervisor
+                should have at least a functional knowledge of the robot's mechanism, at
+                least a heuristic knowledge of the environment and is expected to hold a
+                strategic knowledge of the current task for the given domain.
+        \end{itemize}
+  \item \textit{Mentor} --- This role was introduced to define a robot's
+        behavior when it is deployed as the subject matter expert to monitor, train
+        or educate human interactants. Depending upon the domain of interaction the
+        mentorship can vary anywhere from a physical to cognitive to social nature.
+        However, in any case the robot will be expected to have an exact knowledge
+        of the environment and at least a functional level of knowledge about how
+        the human interactants process the commands, corrections and instructions
+        provided by the robot. This is where Theory of Mind models come into play
+        when deciding on the level of sophistication of robot programming.
+  \item \textit{Information Consumer} --- An information consumer may or may not
+        have stake in the mission being executed by the robot, however it is
+        expected that the human, or computing agent, will have a deep enough
+        knowledge about the overall structure of the mission such that he/she/it can
+        assimilate the data in an informative way. Therefore, it is expected the
+        information consumer will at least have a conceptual knowledge about the
+        tasks of the mission, possesses at least a functional knowledge of the
+        robot's mechanism to make sense of the data being provided, and can be
+        expected to operate in a novel environment.
+  \item \textit{Bystander} --- A bystander is someone external to the defined
+        mission domain and definitions.
 \end{itemize}
 
 \subsection{A Priori Situational Awareness and Taxonomic Effects}
@@ -443,16 +444,16 @@ described in the following diagram:
 \begin{table*}[b!]
   \caption{Julie's Comments}
   \begin{tabular}{p{8cm} p{8cm}}
-    \toprule \\
-    \textbf{Comment} & \textbf{Response} \\
-    \midrule \\
+    \toprule                                                                                               \\
+    \textit{Comment}                                            & \textit{Response}                        \\
+    \midrule                                                                                               \\
     A. Does this task axis related to ``Knowledge'' or he task? Do you mean tactical knowledge on how to
     perform a task? When I saw the category task I thought you would be defining characteristics of
     the task, rather than knowledge for different ways to do it & This makes me think we should
-                                                                  have a better introduction to what does the A priori SA mean and does in the current scope \\
-    B. Multiple comments on clarity of role definition & This draft will focus on this \\
-    C. Why is a certain knowledge level lowest or highest? & There should be either a diagram or some
-                                                             reference to the taxonomy to make this more intuitive \\
+    have a better introduction to what does the A priori SA mean and does in the current scope             \\
+    B. Multiple comments on clarity of role definition          & This draft will focus on this            \\
+    C. Why is a certain knowledge level lowest or highest?      & There should be either a diagram or some
+    reference to the taxonomy to make this more intuitive                                                  \\
     \bottomrule
   \end{tabular}
 \end{table*}
