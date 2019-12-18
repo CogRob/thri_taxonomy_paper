@@ -182,12 +182,12 @@ physical nature of tasks.
 \section{A Priori Situational Awareness Framework for Stereotyping Human Roles}
 
 This section introduces a bridging framework, grounded within the taxonomic
-factors defined in the previous section, which helps in assessing if the system
-design fulfills the mode of interaction that is established between the human
-and the robot. We do this by stereotyping the expected knowledge levels of the
-human collaborator, stereotyped in a certain role within the boundaries of the
+factors defined in the previous section, connecting the system specification to
+the interaction requirements for succesful collaboration between a robot and a
+human. We do this by assigning the expected knowledge levels to each human
+collaborator, stereotyped in a certain role within the boundaries of the
 specified system, and compare this with the required knowledge associated with
-the successful execution of the interaction relationship. We categorize these
+the successful execution of the current interaction. We categorize these
 knowledge levels along the same main axes which we used to establish our
 taxonomy, i.e., task-work knowledge, team-work knowledge, and
 environment/situated-workspace knowledge. As we mentioned earlier, the axes
@@ -199,33 +199,81 @@ of knowledge levels.
 
 Depending upon the \texttt{focus} of the task and whether the task is operating
 in normal or subnominal state, one can establish the \texttt{nature} of
-interaction that will be required to complete the task-work. Let's consider the
-capture-the-flag example the area coverage sub-task is one which requires mainly
-physical cooperation within the team. On the other hand, a defend-the-flag
-sub-task, which is of physical nature when a strategy is already agreed upon,
-can switch to a sub-nominal state when the defense perimeter is breached and is
-elevated to a cognitive task where a new strategy needs to be decided on before
-being physically actuated by the players. A change in the nature of team-work
-inevitably entails a subsequent change in the nature of communication between
-the players, which means a different set of sensing and reasoning capabilities
-are required for the changed sub-task. The design of an HRI system should be
-able to satisfy the largest such set of mobile, perception, and communication
-capabilities as well as the infrastructure to establish the required information
-exchange protocols. In a very similar way, depending upon the team-work between
-a human and a robot depending upon if the interaction is established with a peer
-or a supervisor and whether it is in nominal or sub-nominal status, a similar
-set of rules dictate a necessitated change in the quality of information being
-exchanged between the two interactants. This section stereotypes the roles
-defined in \citet{Goodrich2007,Scholtz2003} by grounding their expected
-knowledge levels for interactions to hold up in nominal conditions. This also
-creates a hard boundary of what can be considered a sub-nominal state of
-interaction and might require a change in the edges of the interaction graph
-where interactants are nodes and an edge exists between two nodes if they are
-interacting.
+interaction that will be required to complete the task-work. This idea is based
+on Norman's model of human-machine interaction \towrite{insert donald norman
+reference}. He defines an interaction relationship established between and
+artifact and a human by grounding it in 4 factors:
+\begin{itemize}
+      \item Affordance - Functional definition of the interaction relationship itself.
+      \item Signifiers - The properties of the artifact which tell the human
+      what affordances can be established.
+      \item Feedback - A behavioral signal from the artifact which acknowledges
+      the successful establishment of the affordance
+      \item Coneptual Model - The sufficient mental model that the agent must
+      have of the artifact to support the affordance relationship
+\end{itemize}
+A good example is one of a person operating an appliation on their smartphone
+with a novel user interface. If the interface affords page-turn via pressing of
+hot-corners on either sides of the screen, then it should have signifiers making
+this affordance clear. In modern UIs, this is done by having a floating
+button-like area which bears the sign of an arrow to make it clear that pressing
+that area will change the view in the direction of the arrow.
 
-We call this an a priori situational awareness framework because it is heavily
-inspired by the situational awareness framework by \citet{Endsley1995}, but
-considers the a priori assumptions which are placed on a system before its
+In a similar vein, we define the interaction relationship between a robot and a
+human, fulfilling a certain HRI role, as an interaction affordance of the HRI
+system. This now allows us to extend Norman's model by grounding the concepts of
+signifiers and conceptual model within the taxonomic specification of the HRI
+system. We omit the feedback aspect at this stage, as that pertains to the
+particular nature and interface of the interaction. Furthermore, this idea is also
+supported by the situational awareness framework proposed by
+\textcite{Endsley1995}. She says that for successful collaborations in a
+dynamic and situated system either of the interactant should have enough
+awareness about the system as well as the current circumstantial context of the
+system to support their particular duties or responsibilities in accordance. She
+goes on to add that this situational awareness depends on task and system
+factors as well as the individual factors, including the training, abilities and
+experiences of the human stakeholders. Our framework, named the a priori
+situational awareness for human-robot interactions, extends Norman's HCI
+model by updating it in three ways:
+\begin{itemize}
+      \item Grounding signifier within the abilities, experience and training of
+      the humans with respect to the robotic agents, such that they can support
+      the technical know-how required by different kinds of interactions, 
+      \item Proposing levels of the possible conceptual models a human can
+      have of a robotic agent, and
+      \item Proposing a range of knowledge-structures for grounding the above
+      mentioned individual factors and the conceptual models within the task,
+      team and environment stratification introduced by our taxonomy
+\end{itemize}
+
+Let's consider the capture-the-flag example the area coverage sub-task is one
+which requires mainly physical cooperation within the team. On the other
+hand, a defend-the-flag sub-task, which is of physical nature when a strategy
+is already agreed upon, can switch to a sub-nominal state when the defense
+perimeter is breached and is elevated to a cognitive task where a new
+strategy needs to be decided on before being physically actuated by the
+players. A change in the nature of team-work inevitably entails a subsequent
+change in the nature of communication between the players, which means a
+different set of sensing and reasoning capabilities are required for the
+changed sub-task. The design of an HRI system should be able to satisfy the
+largest such set of mobile, perception, and communication capabilities as
+well as the infrastructure to establish the required information exchange
+protocols. In a very similar way, depending upon the team-work between a
+human and a robot depending upon if the interaction is established with a
+peer or a supervisor and whether it is in nominal or sub-nominal status, we
+can define a set of rules dictating the necessary change in the quality of
+information being exchanged between the two interactants.
+
+To the above mentioned end, this section
+stereotypes the roles defined in \citet{Goodrich2007,Scholtz2003} by
+grounding their expected knowledge levels for interactions to hold up in
+nominal conditions. This also creates a hard boundary of what can be
+considered a sub-nominal state of interaction and might require a change in
+the edges of the interaction graph where interactants are nodes and an edge
+exists between two nodes if they are interacting.
+
+We call this an a priori situational awareness framework because it is inspired
+by and extends the situational awareness framework by \citet{Endsley1995}, by considering the a priori assumptions which are placed on a system before its
 deployment and their effects on the situational awareness of a dynamic system
 during execution. The a priori situational awareness framework also acts as a
 switchboard connecting task, team and workspace specification to the allowable
@@ -236,12 +284,9 @@ taxonomic factors already provided, creating a set of categorical knowledg
 levels that we can expect the human interactant to possess, and then finally
 relating these categories with the expected level of autonomy for that
 interaction as well as the information abstractions which should be considered
-for maximum efficiency of knowledge take-up. We first begin by introducing the
+for efficient knowledge take-up. We first begin by introducing the
 knowledge levels which will be used to stereotype the human interactant in a
 system.
-
-\towrite{Need to bring out the relation of a priori sa with sa framework and
-  Donald Norman's interaction model}
 
 \subsection{Knowledge Levels for Stereotyping Human Roles}
 
@@ -419,8 +464,16 @@ We propose the following stereotypes of roles to answer these questions:
         robot's mechanism to make sense of the data being provided, and can be
         expected to operate in a novel environment.
   \item \textit{Bystander} --- A bystander is someone external to the defined
-        mission domain and definitions.
+        mission domain and definitions, e.g.\@ a civilian to be rescued in the USAR
+        case example. We define a bystander as someone who has no knowledge of the
+        robot's mechanisms except those projected by its appearance, uniformly
+        varies on the environmental knowledge scale (for example, someone native to
+        the area or could just be a wanderer) and is expected to have no
+        knowledge of the task or mission.
 \end{itemize}
+
+The above definitions are summarized in Table \towrite{insert a table with
+  defined knowledge levels per role}
 
 \subsection{A Priori Situational Awareness and Taxonomic Effects}
 
