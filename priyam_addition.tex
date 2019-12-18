@@ -475,7 +475,32 @@ We propose the following stereotypes of roles to answer these questions:
 The above definitions are summarized in Table \towrite{insert a table with
   defined knowledge levels per role}
 
-\subsection{A Priori Situational Awareness and Taxonomic Effects}
+\subsection{A Priori Situational Awareness for Human-Robot Interactions}
+
+The sections above create the stereotypical knowledge hierarchies that
+standardize each human interaction role and set up the common ground necessary
+for the robot interactant to understand the abilities and expertise of the
+human. Provided with such an a priori situational awareness profile of the human
+the robot can better reason about the depth of information abstraction which
+can be better understood by the human to understand the current context.
+Moreover, following the recommendations in\textcite{Beer2014toward} the robotic
+agent needs to operate at the right level of autonomy such that the human can
+still maintain their internal model of the task with transparency about the
+robot's actions. Understanding the role of the human and corresponding stake in
+the robot's sense, act and plan duties helps the agent in choosing the right
+range of autonomy it should operate in. Anything outside of that range would
+either be too detailed or too opaque for the human's mental model of the robot
+to support and maintain with success.
+
+Following the role stereotypes described in previous sub-sections we assign the
+following ranges from \citeauthor{Beer2014toward}'s taxonomy to each role:
+
+\begin{figure}[]
+      \centering
+      \includegraphics{lora_apsa.jpg}  
+      \caption{Proposed Assignment of Levels of Robotic Automation to Different Human Roles in HRI}
+      \label{fig:lora-apsa}
+\end{figure}
 
 Now that we have stereotyped each role, we can hierarchically categorize the 10
 LoRAs into ranges which are applicable to perception versus physical versus
